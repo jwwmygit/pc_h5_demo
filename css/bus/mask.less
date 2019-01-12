@@ -1,0 +1,32 @@
+#wrap{
+    height: 100%;
+    width: 100%;
+    .mask{
+        position: absolute;
+        z-index: 99;
+        height: 100%;
+        width: 100%;
+        .up{
+            height: 50%;
+            background: #009ee0;
+            transition:1s height;
+        }
+        .down{
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+            height: 50%;
+            background: #009ee0;
+            transition:1s height;
+        }
+        .line{
+            position: absolute;
+            width: 0;
+            top: 50%;
+            margin-top: -2px;
+            height: 4px;
+            background: white;
+            transition:1s width;
+        }
+    }
+}

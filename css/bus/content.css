@@ -1,0 +1,471 @@
+/*我是可以见人的注释*/
+@keyframes works3Move {
+  49% {
+    transform: translateX(-499px) rotateY(0deg);
+  }
+  50% {
+    transform: translateX(-500px) rotateY(180deg);
+  }
+  99% {
+    transform: translateX(-1px) rotateY(180deg);
+  }
+  100% {
+    transform: translateX(0px) rotateY(0deg);
+  }
+}
+@keyframes lh {
+  0% {
+    visibility: visible;
+    transform: translateZ(0px);
+  }
+  50% {
+    transform: translateX(-300px) rotateY(30deg) scale(0.7);
+  }
+}
+@keyframes rs {
+  0% {
+    visibility: hidden;
+    transform: translateZ(-200px);
+  }
+  50% {
+    transform: translateX(300px) rotateY(-30deg) scale(0.7);
+  }
+}
+@keyframes ls {
+  0% {
+    visibility: hidden;
+    transform: translateZ(-200px);
+  }
+  50% {
+    transform: translateX(-300px) rotateY(30deg) scale(0.7);
+  }
+}
+@keyframes rh {
+  0% {
+    visibility: visible;
+    transform: translateZ(0px);
+  }
+  50% {
+    transform: translateX(300px) rotateY(-30deg) scale(0.7);
+  }
+}
+#wrap .content {
+  width: 100%;
+  background: gray;
+  overflow: hidden;
+  position: relative;
+}
+#wrap .content > ul {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  transition: 1s top;
+}
+#wrap .content > ul > li {
+  position: relative;
+  background-position: 50% 50% !important;
+}
+#wrap .content > ul > li:nth-of-type(1) {
+  background: url(../img/bg1.jpg) no-repeat;
+}
+#wrap .content > ul > li:nth-of-type(2) {
+  background: url(../img/bg2.jpg) no-repeat;
+}
+#wrap .content > ul > li:nth-of-type(3) {
+  background: url(../img/bg3.jpg) no-repeat;
+}
+#wrap .content > ul > li:nth-of-type(4) {
+  background: url(../img/bg4.jpg) no-repeat;
+}
+#wrap .content > ul > li:nth-of-type(5) {
+  background: url(../img/bg5.jpg) no-repeat;
+}
+#wrap .content > ul > li > div {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 1100px;
+  height: 520px;
+}
+#wrap .content > ul > li > div.home:hover {
+  cursor: pointer;
+}
+#wrap .content > ul > li > div.home .home1 {
+  width: 100%;
+  height: 100%;
+}
+#wrap .content > ul > li > div.home .home1 ul {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  perspective: 800px;
+  transform-style: preserve-3d;
+}
+#wrap .content > ul > li > div.home .home1 ul li {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+}
+#wrap .content > ul > li > div.home .home1 ul li:nth-of-type(1) {
+  background: #dc6c5f;
+  visibility: visible;
+}
+#wrap .content > ul > li > div.home .home1 ul li:nth-of-type(2) {
+  background: #95dc84;
+}
+#wrap .content > ul > li > div.home .home1 ul li:nth-of-type(3) {
+  background: #64b9d2;
+}
+#wrap .content > ul > li > div.home .home1 ul li:nth-of-type(4) {
+  background: #000000;
+}
+#wrap .content > ul > li > div.home .home1 ul li.leftHide {
+  transform: translateZ(-200px);
+  visibility: hidden;
+  animation: 1s lh 1 linear;
+}
+#wrap .content > ul > li > div.home .home1 ul li.rightShow {
+  transform: translateZ(0px);
+  visibility: visible;
+  animation: 1s rs 1 linear;
+}
+#wrap .content > ul > li > div.home .home1 ul li.leftShow {
+  transform: translateZ(0px);
+  visibility: visible;
+  animation: 1s ls 1 linear;
+}
+#wrap .content > ul > li > div.home .home1 ul li.rightHide {
+  transform: translateZ(-200px);
+  visibility: hidden;
+  animation: 1s rh 1 linear;
+}
+#wrap .content > ul > li > div.home .home1 ul li > div {
+  color: #009ee0;
+  font-size: 80px;
+  line-height: 0.8;
+  font-weight: bold;
+  letter-spacing: -5px;
+  color: white;
+  width: 100%;
+  text-align: center;
+  margin-top: 200px;
+}
+#wrap .content > ul > li > div.home .home2 {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+}
+#wrap .content > ul > li > div.home .home2 ul li {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  margin: 2px;
+  box-shadow: 0 0 4px rgba(25, 25, 25, 0.8);
+}
+#wrap .content > ul > li > div.home .home2 ul li.active {
+  background: white;
+}
+#wrap .content > ul > li > div.course .course1 {
+  margin: 50px;
+}
+#wrap .content > ul > li > div.course .course1 span {
+  color: #009ee0;
+  font-size: 80px;
+  line-height: 0.8;
+  font-weight: bold;
+  letter-spacing: -5px;
+}
+#wrap .content > ul > li > div.course .course2 {
+  width: 400px;
+  margin-left: 50px;
+}
+#wrap .content > ul > li > div.course .course2 p {
+  color: white;
+  line-height: 1.5;
+  font-size: 15px;
+}
+#wrap .content > ul > li > div.course .course3 {
+  width: 480px;
+  position: absolute;
+  right: 50px;
+  top: 70px;
+}
+#wrap .content > ul > li > div.course .course3 .item {
+  width: 120px;
+  height: 132px;
+  float: left;
+  position: relative;
+  perspective: 500px;
+  transform-style: preserve-3d;
+}
+#wrap .content > ul > li > div.course .course3 .item:hover .backFace {
+  transform: rotateY(360deg);
+}
+#wrap .content > ul > li > div.course .course3 .item:hover .face {
+  transform: rotateY(180deg);
+}
+#wrap .content > ul > li > div.course .course3 .item .face {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: gray;
+  background: url(../img/bks.png) no-repeat;
+  background-position: 50% 50% ;
+  backface-visibility: hidden;
+  transition: 1s transform ;
+}
+#wrap .content > ul > li > div.course .course3 .item .backFace {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: pink;
+  padding: 10px;
+  box-sizing: border-box;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+  transition: 1s transform ;
+}
+#wrap .content > ul > li > div.works .works1 {
+  color: #009ee0;
+  font-size: 80px;
+  line-height: 0.8;
+  font-weight: bold;
+  letter-spacing: -5px;
+  margin: 50px 0px 100px 50px;
+}
+#wrap .content > ul > li > div.works .works2 {
+  margin-left: 50px;
+}
+#wrap .content > ul > li > div.works .works2 .item {
+  width: 220px;
+  height: 133px;
+  float: left;
+  position: relative;
+  margin: 0 1px;
+  overflow: hidden;
+}
+#wrap .content > ul > li > div.works .works2 .item:last-child {
+  width: 332px;
+}
+#wrap .content > ul > li > div.works .works2 .item:hover .mask {
+  opacity: 1;
+}
+#wrap .content > ul > li > div.works .works2 .item:hover img {
+  transform: scale(1.5) rotate(45deg);
+}
+#wrap .content > ul > li > div.works .works2 .item img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transition: .8s transform;
+}
+#wrap .content > ul > li > div.works .works2 .item .mask {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  box-sizing: border-box;
+  padding: 15px;
+  opacity: 0;
+  transition: .8s opacity;
+  will-change: transform;
+}
+#wrap .content > ul > li > div.works .works2 .item .mask .text {
+  color: white;
+}
+#wrap .content > ul > li > div.works .works2 .item .mask .icon {
+  display: block;
+  width: 32px ;
+  height: 34px;
+  background: pink;
+  margin: 0 auto;
+  margin-top: 10px;
+  background: url(../img/zoomico.png) no-repeat;
+  transition: 0.8s background-position;
+}
+#wrap .content > ul > li > div.works .works2 .item .mask .icon:hover {
+  background-position: 0 -36px;
+}
+#wrap .content > ul > li > div.works .works3 {
+  width: 167px;
+  height: 191px;
+  background: url(../img/robot.png) no-repeat;
+  position: absolute;
+  left: 900px;
+  top: 170px;
+  animation: 5s works3Move infinite linear;
+}
+#wrap .content > ul > li > div.about .about1 {
+  margin: 50px 0 100px 50px;
+}
+#wrap .content > ul > li > div.about .about1 span {
+  color: #009ee0;
+  font-size: 80px;
+  line-height: 0.8;
+  font-weight: bold;
+  letter-spacing: -5px;
+}
+#wrap .content > ul > li > div.about .about2 {
+  width: 400px;
+  margin-left: 50px;
+}
+#wrap .content > ul > li > div.about .about2 p {
+  color: white;
+  line-height: 1.5;
+  font-size: 15px;
+}
+#wrap .content > ul > li > div.about .about3 .item {
+  width: 260px;
+  height: 200px;
+  position: absolute;
+  z-index: 2;
+  border: 5px solid rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+  overflow: hidden;
+}
+#wrap .content > ul > li > div.about .about3 .item:hover > img {
+  transform: scale(1);
+}
+#wrap .content > ul > li > div.about .about3 .item:nth-of-type(1) {
+  left: 750px;
+  top: 50px;
+}
+#wrap .content > ul > li > div.about .about3 .item:nth-of-type(2) {
+  left: 600px;
+  top: 290px;
+}
+#wrap .content > ul > li > div.about .about3 .item > img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  transform: scale(1.5);
+  transition: 1s transform;
+}
+#wrap .content > ul > li > div.about .about3 .item > ul {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+#wrap .content > ul > li > div.about .about3 .item > ul > li {
+  float: left;
+  position: relative;
+  overflow: hidden;
+}
+#wrap .content > ul > li > div.about .about3 .item > ul > li > img {
+  position: absolute;
+  transition: 1s left,1s top;
+}
+#wrap .content > ul > li > div.about .about4 {
+  position: absolute;
+  left: 50%;
+  top: -50px;
+  width: 357px;
+  height: 998px;
+  background: url(../img/greenLine.png) no-repeat;
+}
+#wrap .content > ul > li > div.team .team1 {
+  width: 400px;
+  margin: 50px;
+  float: left;
+}
+#wrap .content > ul > li > div.team .team1 span {
+  color: #009ee0;
+  font-size: 80px;
+  line-height: 0.8;
+  font-weight: bold;
+  letter-spacing: -5px;
+}
+#wrap .content > ul > li > div.team .team2 {
+  width: 400px;
+  margin: 50px;
+  float: right;
+}
+#wrap .content > ul > li > div.team .team2 p {
+  color: white;
+  line-height: 1.5;
+  font-size: 15px;
+}
+#wrap .content > ul > li > div.team .team3 {
+  width: 944px;
+  height: 448px;
+  position: absolute;
+  left: 50%;
+  bottom: -200px;
+  margin-left: -472px;
+}
+#wrap .content > ul > li > div.team .team3 ul {
+  width: 100%;
+  height: 100%;
+}
+#wrap .content > ul > li > div.team .team3 ul li {
+  float: left;
+  width: 118px;
+  height: 100%;
+  background: url(../img/team.png) no-repeat;
+  transition: 1s opacity;
+  will-change: transform;
+}
+#wrap .content > ul > li > div.team .team3 ul li:nth-of-type(2) {
+  background-position: -118px 0;
+}
+#wrap .content > ul > li > div.team .team3 ul li:nth-of-type(3) {
+  background-position: -236px 0;
+}
+#wrap .content > ul > li > div.team .team3 ul li:nth-of-type(4) {
+  background-position: -354px 0;
+}
+#wrap .content > ul > li > div.team .team3 ul li:nth-of-type(5) {
+  background-position: -472px 0;
+}
+#wrap .content > ul > li > div.team .team3 ul li:nth-of-type(6) {
+  background-position: -590px 0;
+}
+#wrap .content > ul > li > div.team .team3 ul li:nth-of-type(7) {
+  background-position: -708px 0;
+}
+#wrap .content > ul > li > div.team .team3 ul li:nth-of-type(8) {
+  background-position: -826px 0;
+}
+#wrap .content > ul > li > div.team .team3 canvas {
+  position: absolute;
+  top: 20px;
+}
+#wrap .content > .dot {
+  position: fixed;
+  right: 10px;
+  top: 50%;
+}
+#wrap .content > .dot span {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50% ;
+  border: 2px solid pink;
+  margin-top: 5px;
+}
+#wrap .content > .dot span.active {
+  background: white;
+}

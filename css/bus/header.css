@@ -1,0 +1,53 @@
+.clear,
+#wrap .header .headMain .btns ul {
+  *zoom: 1;
+}
+.clear:after,
+#wrap .header .headMain .btns ul:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+#wrap .header {
+  width: 100%;
+}
+#wrap .header .headMain {
+  width: 1100px;
+  height: 80px;
+  background: white;
+  margin: 0 auto;
+  position: relative;
+}
+#wrap .header .headMain .logo {
+  float: left;
+  margin-top: 30px;
+}
+#wrap .header .headMain .btns {
+  float: right;
+  margin-top: 50px;
+}
+#wrap .header .headMain .btns ul li {
+  float: left;
+  position: relative;
+  margin-left: 40px;
+}
+#wrap .header .headMain .btns ul li:hover .up {
+  width: 100%;
+}
+#wrap .header .headMain .btns ul li a div.up {
+  position: absolute;
+  color: black;
+  width: 0;
+  overflow: hidden;
+  transition: 1s width;
+}
+#wrap .header .headMain .arrow {
+  transition: 1s left;
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  bottom: -11px;
+  width: 21px;
+  height: 11px;
+  background: url(../img/menuIndicator.png) no-repeat;
+}
